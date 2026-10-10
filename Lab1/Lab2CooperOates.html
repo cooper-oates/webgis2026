@@ -1,15 +1,126 @@
 <html>
 <head>
-<title>Lab X for Web GIS</title>
-</head>
-<body>
-<h1>Lab X for Web GIS</h1>
-<h3>Name: YOUR NAME HERE</h3>
-<!-- Comments-->
-</body>
-</html>
+<title>Lab 2 for Web GIS</title>
 
-<h3>Current Date is: </h3>
+<script type="text/javascript"
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOx0u4G8taPLVhjL7ownU4jH6EJYWRMj8">
+</script>
+
+<script type="text/javascript">
+function initialize()
+{
+var latlng1 = new google.maps.LatLng(35.306840, -80.73200);
+var myOptions1 = {zoom: 14,center: latlng1,mapTypeId: google.maps.MapTypeId.HYBRID};
+var map1 = new google.maps.Map(document.getElementById("map_uncc"), myOptions1);
+
+var latlng2 = new google.maps.LatLng(35.307162601959504, -80.73006334138948);
+var myOptions2 = {zoom: 18,center: latlng2,mapTypeId: google.maps.MapTypeId.HYBRID};
+var map2 = new google.maps.Map(document.getElementById("map_mceniry"), myOptions2);
+
+var latlng3 = new google.maps.LatLng(33.91073944333197, -78.11813298953794);
+var myOptions3 = {
+zoom: 20,
+center: latlng3,
+mapTypeId: google.maps.MapTypeId.HYBRID
+};
+var map3 = new google.maps.Map(document.getElementById("map_pepperoni"), myOptions3);
+
+var latlng4 = new google.maps.LatLng(36.08093945463128, -79.45126368583813);
+var myOptions4 = {
+zoom: 18,
+center: latlng4,
+mapTypeId: google.maps.MapTypeId.HYBRID
+};
+var map4 = new google.maps.Map(document.getElementById("map_burlington"), myOptions4);
+
+var latlng5 = new google.maps.LatLng(35.29627402494587, -81.01017575567737);
+var myOptions5 = {zoom: 18,center: latlng5,mapTypeId: google.maps.MapTypeId.HYBRID};
+var map5 = new google.maps.Map(document.getElementById("map_mountholly"), myOptions5);
+
+var latlng6 = new google.maps.LatLng(35.91326372802908, -79.05680240690626);
+var myOptions6 = {zoom: 20,center: latlng6,mapTypeId: google.maps.MapTypeId.HYBRID};
+var map6 = new google.maps.Map(document.getElementById("map_hesnothere"), myOptions6);
+
+var latlng7 = new google.maps.LatLng(36.129563249312454, -79.83343744274126);
+var myOptions7 = {zoom: 18,center: latlng7,mapTypeId: google.maps.MapTypeId.HYBRID};
+var map7 = new google.maps.Map(document.getElementById("map_greensboro"), myOptions7);
+}
+</script>
+</head>
+
+<body onload="initialize()" style="background-color: green;">
+
+<h1>Lab 2 for Web GIS</h1>
+<h3>Name: Cooper Oates</h3>
+
+<!-- This is a comment -->
+
+<h3>Current Date is:</h3>
 <script type="text/javascript">
 document.write(Date());
 </script>
+
+<h3>Generate a random number:</h3>
+<script type="text/javascript">
+document.write(Math.random());
+</script>
+
+<h3>Define variables and perform calculation:</h3>
+<script type="text/javascript">
+var str1 = "Hello World";
+document.write(str1);
+document.write("<br>");
+
+var x = 5;
+document.write(x);
+document.write("<br>");
+
+var y = 10;
+var z = x + y;
+document.write(z);
+document.write("<br>");
+</script>
+
+<h3>Define a function</h3>
+<script type="text/javascript">
+function sum3(x1,x2,x3)
+{var sum = x1+x2+x3;return sum;}
+
+var k = sum3(5,6,7);
+document.write(k);
+</script>
+
+<h3>Question 2</h3>
+<script type="text/javascript">
+var X1 = 200;
+var X2 = 300;
+var X3 = X1 * X2;
+
+document.write("X1 = " + X1 + "<br>");
+document.write("X2 = " + X2 + "<br>");
+document.write("X3 = " + X3);
+</script>
+
+<h3>Map of UNC-Charlotte</h3>
+<div id="map_uncc" style="width:512px; height:512px"></div>
+
+<h3>McEniry</h3>
+<div id="map_mceniry" style="width:512px; height:512px"></div>
+
+<h3>Pepperoni Grill, Oak Island</h3>
+<div id="map_pepperoni" style="width:512px; height:512px"></div>
+
+<h3>Burlington NC, Pickleball</h3>
+<div id="map_burlington" style="width:512px; height:512px"></div>
+
+<h3>Mount Holly City Hall</h3>
+<div id="map_mountholly" style="width:512px; height:512px"></div>
+
+<h3>He's Not Here</h3>
+<div id="map_hesnothere" style="width:512px; height:512px"></div>
+
+<h3>Greensboro Science Center</h3>
+<div id="map_greensboro" style="width:512px; height:512px"></div>
+
+</body>
+</html>
